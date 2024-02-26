@@ -3,6 +3,10 @@ example1_1024/
 example1_example2_512/
 example1_example2_1024/
 
+out_active.png
+out_mask.png
+out_soft.png
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
