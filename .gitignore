@@ -3,7 +3,6 @@ example1_1024/
 example1_example2_512/
 example1_example2_1024/
 
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
