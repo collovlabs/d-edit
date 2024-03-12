@@ -133,10 +133,6 @@ def register_attention_disentangled_control(unet, controller):
 
     def register_recr(net_, count, place_in_unet):   
         if net_.__class__.__name__ == 'Attention' and net_.to_k.in_features == unet.ca_dim:
-        # if net_.__class__.__name__ == 'Attention' and net_.to_k.in_features == 1024:
-        # if net_.__class__.__name__ == 'Attention' and net_.to_k.in_features == 2048:
-            # net_.reshape_heads_to_batch_dim = reshape_heads_to_batch_dim(net_)
-            # net_.reshape_batch_dim_to_heads = reshape_batch_dim_to_heads(net_)
             net_.forward = ca_forward(net_, place_in_unet)
             return count + 1
         elif hasattr(net_, 'children'):
