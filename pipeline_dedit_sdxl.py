@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 from utils_mask import  check_mask_overlap_torch
 
 device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu')
-
+max_length = 40
 class DEditSDXLPipeline:
     def __init__(
         self,
@@ -191,7 +191,7 @@ class DEditSDXLPipeline:
                     self.tokenizer_2,
                     self.text_encoder, 
                     self.text_encoder_2, 
-                    length = 20, 
+                    length = max_length, 
                     bsz = train_batch_size, 
                     weight_dtype = weight_dtype
                 )
@@ -330,7 +330,7 @@ class DEditSDXLPipeline:
                 self.tokenizer_2,
                 self.text_encoder,
                 self.text_encoder_2,
-                length = 20, 
+                length = max_length, 
                 bsz = train_batch_size,
                 weight_dtype = weight_dtype
             )
@@ -460,7 +460,7 @@ class DEditSDXLPipeline:
                     self.tokenizer_2,
                     self.text_encoder,
                     self.text_encoder_2, 
-                    length = 20,
+                    length = max_length,
                     bsz = train_batch_size,
                     weight_dtype = weight_dtype
                 )
@@ -482,7 +482,7 @@ class DEditSDXLPipeline:
                     self.tokenizer_2,
                     self.text_encoder,
                     self.text_encoder_2, 
-                    length = 20,
+                    length = max_length,
                     bsz = train_batch_size,
                     weight_dtype = weight_dtype
                 )
@@ -627,7 +627,7 @@ class DEditSDXLPipeline:
                 self.tokenizer_2,
                 self.text_encoder,
                 self.text_encoder_2,
-                length = 20, 
+                length = max_length, 
                 bsz = train_batch_size, 
                 weight_dtype = weight_dtype
             )
@@ -637,7 +637,7 @@ class DEditSDXLPipeline:
                 self.tokenizer_2,
                 self.text_encoder,
                 self.text_encoder_2,
-                length = 20, 
+                length = max_length, 
                 bsz = train_batch_size,
                 weight_dtype = weight_dtype
             )
@@ -819,7 +819,7 @@ class DEditSDXLPipeline:
             self.tokenizer_2,
             self.text_encoder,
             self.text_encoder_2, 
-            length = 20,
+            length = max_length,
             bsz = num_imgs,
             weight_dtype = weight_dtype,
             normal_token_id_list = normal_token_id_list
