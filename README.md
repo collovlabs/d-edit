@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ## 💻 Run
 
 ### 1. Segmentation
-Put the image (of any resulition) to be edited  into the folder with customized name, and rename the image as "img.png" or "img.jpg". 
+Put the image (of any resolution) to be edited  into the folder with a specified name, and rename the image as "img.png" or "img.jpg". 
 Then run the segmentation model
 ```
 sh ./scripts/run_segment.sh
@@ -65,7 +65,7 @@ python ui_edit_mask.py
 For image-based editing, repeat this step for both reference and target images.
 
 ### 2. Model Finetuning
-Finetune UNet cross-attention layer of diffuion models by running 
+Finetune UNet cross-attention layer of diffusion models by running 
 ```
 sh ./scripts/sdxl/run_ft_sdxl_1024.sh
 ```
@@ -86,7 +86,7 @@ To see if the original image can be constructed
 sh ./scripts/sdxl/run_recon.sh
 ```
 #### 3.1 Text-based
-Replace the target item (tgt_index) with the item described by text prompt (tgt_prompt)
+Replace the target item (tgt_index) with the item described by the text prompt (tgt_prompt)
 ```
 sh ./scripts/sdxl/run_text.sh
 ```
@@ -98,26 +98,26 @@ sh ./scripts/sdxl/run_image.sh
 #### 3.3 Mask-based
 For target items (tgt_indices_list), resize it (resize_list), move it (delta_x, delta_y) or reshape it by manually editing the mask shape (using UI).
 
-The resulting new masks (processed by simple algorithm) can be visualized in './example1/move_resize/seg_move_resize.png', if it is not reasonable, edit using the UI.
+The resulting new masks (processed by a simple algorithm) can be visualized in './example1/move_resize/seg_move_resize.png', if it is not reasonable, edit using the UI.
 
 ```
 sh ./scripts/sdxl/run_move_resize.sh
 ```
 #### 3.4 Remove
-Remove the target item (tgt_index), the remaining region will be reassigned to the nearby regions with simple algorithm.
-The resulting new masks (processed by simple algorithm) can be visualized in './example1/remove/seg_removed.png', if it is not reasonable, edit using the UI.
+Remove the target item (tgt_index), the remaining region will be reassigned to the nearby regions with a simple algorithm.
+The resulting new masks (processed by a simple algorithm) can be visualized in './example1/remove/seg_removed.png', if it is not reasonable, edit using the UI.
 
 ```
 sh ./scripts/sdxl/run_move_resize.sh
 ```
 
 #### 3.4 General editing parameters
-- We partition the image into three region as shown below. Regions with hard mask are untouched, regions with active mask are generated with diffusion model, regions with soft mask keep original content in the first "strength*N" sampling steps.
+- We partition the image into three regions as shown below. Regions with the hard mask are frozen, regions with the active mask are generated with diffusion model, and regions with soft mask keep the original content in the first "strength*N" sampling steps.
 <p align="center">
   <img src="assets/mask_def.png" height=200>
 </p>
 
-- During editing, if you use an edited segmentation which is different from finetuning, add --load_edited_mask; For mask-based and remove, if you edit the masks automatially processed by the algorithm as mentioned, add --load_edited_processed_mask.
+- During editing, if you use an edited segmentation that is different from finetuning, add --load_edited_mask; For mask-based and remove, if you edit the masks automatically processed by the algorithm as mentioned, add --load_edited_processed_mask.
 
 ### Cite
 If you find D-Edit useful for your research and applications, please cite us using this BibTeX:
