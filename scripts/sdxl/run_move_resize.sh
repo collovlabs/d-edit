@@ -18,3 +18,4 @@ CUDA_VISIBLE_DEVICES=1 python main.py --name=$IMAGE_NAME \
     --resize_list 0.5 \
     --priority_list 1  
     
+    # --load_edited_processed_mask
