@@ -3,6 +3,7 @@ python main.py --name=$IMAGE_NAME \
     --dpm="sdxl" \
     --resolution=1024 \
     --load_trained \
+    --num_tokens=5 \
     --text \
     --seed=23 \
     --num_sampling_step=20 \
