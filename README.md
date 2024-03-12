@@ -7,7 +7,7 @@
 
 
 </div>
-D-Edit is a versatile image editing framework based on diffusion models, supporting text, image, mask, and optimization-guided editing. 
+D-Edit is a versatile image editing framework based on diffusion models, supporting text, image, mask-based editing. 
 
 <!-- <img src='assets/applications.png'> -->
 ## Release
