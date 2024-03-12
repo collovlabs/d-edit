@@ -2,9 +2,8 @@
 <h1>An item is Worth a Prompt: Versatile Image Editing with Disentangled Control</h1>
 
 
-<a href='https:'><img src='https://img.shields.io/badge/Project-Page-green'></a>
-<a href='https://arxiv.org/'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
-<a href='https://huggingface.co/papers/'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a> 
+
+<a href='https://arxiv.org/abs/2403.04880'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
 
 
 </div>
@@ -12,7 +11,7 @@ D-Edit is a versatile image editing framework based on diffusion models, support
 
 <!-- <img src='assets/applications.png'> -->
 ## Release
-- [2024/02/26] 🔥 Code uploaded.
+- [2024/03/12] 🔥 Code uploaded.
 
 
 
@@ -127,7 +126,7 @@ If you find D-Edit useful for your research and applications, please cite us usi
 @article{feng2024dedit,
   title={An item is Worth a Prompt: Versatile Image Editing with Disentangled Control},
   author={Aosong Feng, Weikang Qiu, Jinbin Bai, Kaicheng Zhou, Zhen Dong, Xiao Zhang, Rex Ying, and Leandros Tassiulas},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:2403.04880},
   year={2024}
 }
 ```
