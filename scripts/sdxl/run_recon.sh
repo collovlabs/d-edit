@@ -5,7 +5,7 @@ python main.py --name=$IMAGE_NAME \
     --num_tokens=5 \
     --load_trained \
     --recon \
-    --seed=2024 \
+    --seed=20 \
     --guidance_scale=3 \
     --num_sampling_step=20 \
     --num_imgs=2 \
