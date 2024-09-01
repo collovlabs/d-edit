@@ -24,6 +24,18 @@ D-Edit is a versatile image editing framework based on diffusion models, support
   <img alt="image" src="assets/demo2.gif" width="45%">
 </p>
 
+1. **Text-Guided Editing**：Allows users to select an object within an image and replace or refine it based on a text description.
+   - Key features:
+     - Generates more realistic details and smoother transitions than alternative methods
+     - Focuses edits specifically on the targeted object
+     - Preserves unrelated parts of the image
+
+2. **Image-Guided Editing**： Enables users to choose an object from a reference image and transplant it into another image while preserving its identity.
+   - Key features:
+     - Ensures seamless integration of the object into the new context
+     - Adapts the object's appearance to match the target image's style
+     - Works effectively even when the object's appearance differs significantly between reference and target images
+
 
 
 <p align="center">
@@ -31,6 +43,20 @@ D-Edit is a versatile image editing framework based on diffusion models, support
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   <img alt="remove" src="assets/demo4.gif" width="45%">
 </p>
+
+
+
+3. **Mask-Based Editing**： Involves manipulating objects by directly editing their masks.
+   - Key features:
+     - Allows for operations like moving, reshaping, resizing, and refining objects
+     - Fills in new details according to the object's associated prompt
+     - Produces natural-looking results that maintain consistency with the overall image
+
+4. **Item Removal**: Enables users to remove objects from images by deleting the mask-object associations.
+   - Key features:
+     - Intelligently fills in the empty space left by removed objects
+     - Ensures a coherent final image
+     - Maintains the integrity of the surrounding image elements
 
 ## 🔧 Dependencies and Installation
 - Python >= 3.8 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html))
